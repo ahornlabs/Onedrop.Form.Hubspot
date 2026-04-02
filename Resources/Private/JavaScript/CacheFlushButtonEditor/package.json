@@ -14,6 +14,6 @@
         "react": "^16.8.4"
     },
     "neos": {
-        "buildTargetDirectory": "../../../Public/JavaScript/NoopButtonEditor"
+        "buildTargetDirectory": "../../../Public/JavaScript/CacheFlushButtonEditor"
     }
 }

@@ -31,6 +31,6 @@
         inspector:
           group: form
           position: 40
-          editor: 'Onedrop.Form.Hubspot/Inspector/Editors/NoopButtonEditor'
+          editor: 'Onedrop.Form.Hubspot/Inspector/Editors/CacheFlushButtonEditor'
           editorOptions:
             label: 'Formular-Liste neu laden'

@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import {Button} from '@neos-project/react-ui-components';
 import PropTypes from 'prop-types';
 
-export default class NoopButtonEditor extends PureComponent {
+export default class CacheFlushButtonEditor extends PureComponent {
 
     static propTypes = {
         options: PropTypes.object,

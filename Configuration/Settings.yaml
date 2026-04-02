@@ -24,8 +24,8 @@ Neos:
     Ui:
       resources:
         javascript:
-          Onedrop.Form.Hubspot:NoopButtonEditor:
-            resource: 'resource://Onedrop.Form.Hubspot/Public/JavaScript/NoopButtonEditor/Plugin.js'
+          Onedrop.Form.Hubspot:CacheFlushButtonEditor:
+            resource: 'resource://Onedrop.Form.Hubspot/Public/JavaScript/CacheFlushButtonEditor/Plugin.js'
 
   AjaxForm:
     includeJavascript: true
