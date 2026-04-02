@@ -21,6 +21,12 @@ Neos:
       autoInclude:
         Onedrop.Form.Hubspot: true
 
+    Ui:
+      resources:
+        javascript:
+          Onedrop.Form.Hubspot:NoopButtonEditor:
+            resource: 'resource://Onedrop.Form.Hubspot/Public/JavaScript/NoopButtonEditor/Plugin.js'
+
   AjaxForm:
     includeJavascript: true
   Flow:

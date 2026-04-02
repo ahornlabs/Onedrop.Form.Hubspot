@@ -1,4 +1,12 @@
----
+-
+  name: 'Hubspot Cache Flush'
+  uriPattern: '__hubspot/cache/flush'
+  defaults:
+    '@package': 'Onedrop.Form.Hubspot'
+    '@controller': 'HubspotCache'
+    '@action': 'flush'
+    '@format': 'json'
+  httpMethods: ['POST']
 -
   name: 'Ajax Form Endpoint'
   uriPattern: '__form/submit'

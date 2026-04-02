@@ -1,0 +1,19 @@
+{
+    "name": "@onedrop/noop-button-editor",
+    "license": "MIT",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "NODE_ENV=production neos-react-scripts build",
+        "watch": "neos-react-scripts watch"
+    },
+    "dependencies": {
+        "@neos-project/neos-ui-extensibility-webpack-adapter": "^8.3",
+        "@neos-project/react-ui-components": "^5.3",
+        "prop-types": "^15.6.0",
+        "react": "^16.8.4"
+    },
+    "neos": {
+        "buildTargetDirectory": "../../../Public/JavaScript/NoopButtonEditor"
+    }
+}

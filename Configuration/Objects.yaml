@@ -1,3 +1,13 @@
+Onedrop\Form\Hubspot\Controller\HubspotCacheController:
+  properties:
+    cache:
+      object:
+        factoryObjectName: Neos\Flow\Cache\CacheManager
+        factoryMethodName: getCache
+        arguments:
+          1:
+            value: Onedrop_Form_Hubspot
+
 Onedrop\Form\Hubspot\Service\HubspotFormService:
   properties:
     cache:

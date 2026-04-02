@@ -23,3 +23,14 @@
           editorOptions:
             placeholder: 'Formular wählen'
             dataSourceIdentifier: 'onedrop-form-hubspot-forms'
+    hubspotFormsReloadButton:
+      type: string
+      ui:
+        label: ' '
+        reloadIfChanged: false
+        inspector:
+          group: form
+          position: 40
+          editor: 'Onedrop.Form.Hubspot/Inspector/Editors/NoopButtonEditor'
+          editorOptions:
+            label: 'Formular-Liste neu laden'
