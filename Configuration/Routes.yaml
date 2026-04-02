@@ -1,6 +1,6 @@
 -
   name: 'Hubspot Cache Flush'
-  uriPattern: '__hubspot/cache/flush'
+  uriPattern: 'neos/__hubspot/cache/flush'
   defaults:
     '@package': 'Onedrop.Form.Hubspot'
     '@controller': 'HubspotCache'

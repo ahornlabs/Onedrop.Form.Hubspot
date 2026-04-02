@@ -34,3 +34,12 @@ Neos:
       routes:
         'Onedrop.Form.Hubspot':
           position: 'start'
+    security:
+      authentication:
+        providers:
+          'Neos.Neos:Backend':
+            requestPatterns:
+              'Onedrop.Form.Hubspot:HubspotCacheController':
+                pattern: 'ControllerObjectName'
+                patternOptions:
+                  controllerObjectNamePattern: 'Onedrop\Form\Hubspot\Controller\.*'
