@@ -15,6 +15,7 @@ export default class CacheFlushButtonEditor extends PureComponent {
     state = {
         message: null,
         isError: false,
+        refreshNeeded: false,
     };
 
     handleClick = () => {
@@ -38,18 +39,26 @@ export default class CacheFlushButtonEditor extends PureComponent {
                 return res.json();
             })
             .then(() => {
-                this.setState({message: 'Liste erfolgreich erneuert', isError: false});
+                this.setState({
+                    message: 'Liste erfolgreich erneuert',
+                    isError: false,
+                    refreshNeeded: true,
+                });
                 setTimeout(() => this.setState({message: null}), 4000);
             })
             .catch(err => {
-                this.setState({message: err.message || 'Fehler beim Erneuern der Liste', isError: true});
+                this.setState({
+                    message: err.message || 'Fehler beim Erneuern der Liste',
+                    isError: true,
+                    refreshNeeded: false,
+                });
                 setTimeout(() => this.setState({message: null}), 6000);
             });
     };
 
     render() {
         const label = (this.props.options && this.props.options.label) || 'Button';
-        const {message, isError} = this.state;
+        const {message, isError, refreshNeeded} = this.state;
 
         return (
             <div>
@@ -66,6 +75,15 @@ export default class CacheFlushButtonEditor extends PureComponent {
                         backgroundColor: isError ? '#cc0000' : '#00a338',
                     }}>
                         {message}
+                    </div>
+                )}
+                {refreshNeeded && !isError && (
+                    <div style={{
+                        marginTop: '8px',
+                        fontSize: '12px',
+                        color: '#666',
+                    }}>
+                        Bitte Browser refreshen, um die aktualisierte Liste zu sehen.
                     </div>
                 )}
             </div>
