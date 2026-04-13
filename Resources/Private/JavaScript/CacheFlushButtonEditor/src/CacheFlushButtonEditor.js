@@ -83,7 +83,7 @@ export default class CacheFlushButtonEditor extends PureComponent {
                         fontSize: '12px',
                         color: '#666',
                     }}>
-                        Bitte Browser refreshen, um die aktualisierte Liste zu sehen.
+                        Bitte Browser neu laden…
                     </div>
                 )}
             </div>
