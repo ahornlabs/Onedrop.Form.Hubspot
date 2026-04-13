@@ -42,4 +42,4 @@ Neos:
               'Onedrop.Form.Hubspot:HubspotCacheController':
                 pattern: 'ControllerObjectName'
                 patternOptions:
-                  controllerObjectNamePattern: 'Onedrop\Form\Hubspot\Controller\.*'
+                  controllerObjectNamePattern: 'Onedrop\Form\Hubspot\Controller\HubspotCacheController'
