@@ -2,9 +2,16 @@ privilegeTargets:
   'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
     Onedrop_Form_Hubspot:
       matcher: method(Onedrop\Form\Hubspot\Controller\AjaxFormController->submitAction())
+    Onedrop_Form_Hubspot_CacheFlush:
+      matcher: method(Onedrop\Form\Hubspot\Controller\HubspotCacheController->flushAction())
 roles:
   'Neos.Flow:Everybody':
     privileges:
       -
         privilegeTarget: Onedrop_Form_Hubspot
+        permission: GRANT
+  'Neos.Neos:Editor':
+    privileges:
+      -
+        privilegeTarget: Onedrop_Form_Hubspot_CacheFlush
         permission: GRANT

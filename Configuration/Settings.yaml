@@ -21,6 +21,12 @@ Neos:
       autoInclude:
         Onedrop.Form.Hubspot: true
 
+    Ui:
+      resources:
+        javascript:
+          Onedrop.Form.Hubspot:CacheFlushButtonEditor:
+            resource: 'resource://Onedrop.Form.Hubspot/Public/JavaScript/CacheFlushButtonEditor/Plugin.js'
+
   AjaxForm:
     includeJavascript: true
   Flow:
@@ -28,3 +34,12 @@ Neos:
       routes:
         'Onedrop.Form.Hubspot':
           position: 'start'
+    security:
+      authentication:
+        providers:
+          'Neos.Neos:Backend':
+            requestPatterns:
+              'Onedrop.Form.Hubspot:HubspotCacheController':
+                pattern: 'ControllerObjectName'
+                patternOptions:
+                  controllerObjectNamePattern: 'Onedrop\Form\Hubspot\Controller\HubspotCacheController'
