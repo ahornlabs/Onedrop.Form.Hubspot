@@ -1,5 +1,5 @@
 {
-    "name": "@onedrop/noop-button-editor",
+    "name": "@onedrop/cache-flush-button-editor",
     "license": "MIT",
     "version": "1.0.0",
     "private": true,
